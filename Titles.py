@@ -1,4 +1,4 @@
-# Renames files in directory so that anime names are moved to the front and translation groups, resolutions, and other
+# Renames files in directory so that names are moved to the front and translation groups, resolutions, and other info
 #   are pushed to the back
 
 import os
@@ -10,7 +10,7 @@ prefix = re.compile(r'^(\[.*\]) (.*)')
 batch = re.compile(r'^(\(Batch\)) (.*)')
 
 
-path = 'I:\\Anime'                                                  # Path file for intended directory
+path = 'PATH NAME'                                                  # Path file for intended directory
 pathList = os.listdir(path)                                         # Lists all folders in directory
 
 os.getcwd()                                                         # Check to make sure user is in correct directory
@@ -35,7 +35,7 @@ for name in pathList:
 
 
 
-# Removes the '(Batch)' prefix on the folder names -- if you downloaded batches from Horriblesubs.info
+# Removes the '(Batch)' prefix on the folder names -- Can change (Batch) to anything in the regex above
 
 for name in pathList:
     if batch.match(pathList[i]) == None:                           # If the name of folder doesn't start with (Batch):
